@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Build files
+build/
+dist/
+
+# Environment variables
+.env*
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+npm-debug.log*
+
+# macOS files
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
