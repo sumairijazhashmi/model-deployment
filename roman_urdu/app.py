@@ -36,9 +36,21 @@ decoder_hidden = [tf.zeros((1, units * 2)) for _ in range(num_layers * 2)]
 decoder(dummy_input, decoder_hidden, tf.random.uniform((1, 10, units * 2), dtype=tf.float32))
 
 
-encoder.load_weights('encoder_weights.h5')
-decoder.load_weights('decoder_weights.h5')
+print('abt to request weights')
 
+encoder_weights_file = 'encoder_weights.h5'
+decoder_weights_file = 'decoder_weights.h5'
+encoder_weights_url = 'https://www.dropbox.com/scl/fi/aga3ldlbb7n3qio2rjk6n/encoder_weights.h5?rlkey=2zl5uyuawpllr5pk8e87cduk9&st=ksbp0ibf&dl=1'
+decoder_weights_url = 'https://www.dropbox.com/scl/fi/tgc56zpo6vf0b38eznd3t/decoder_weights.h5?rlkey=8lb298do6q5kykmty63rjd5ua&st=c4aw1pzf&dl=1'
+
+urllib.request.urlretrieve(encoder_weights_url, encoder_weights_file)
+urllib.request.urlretrieve(decoder_weights_url, decoder_weights_file)
+
+encoder.load_weights(encoder_weights_file)
+decoder.load_weights(decoder_weights_file)
+
+
+print('got weights')
 
 urdu_alphabet = [
     '\u0627', '\u0622', '\u0628', '\u067E', '\u062A', '\u0679', '\u062B',
