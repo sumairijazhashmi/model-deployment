@@ -14,3 +14,9 @@ Tech used: Streamlit for model deployment and Tensorflow for model development.
 Note: The model is not fully trained due to limited computational resources. The actual fully trained model is available [here](https://github.com/sumairijazhashmi/urdu-roman-transliterator).
 
 Process: Modularize code for model development, save model weights and store in cloud bucket, create a new Streamlit app, import the model as a Python module inside the Streamlit app, and get model's weights from the external resource. Now you can use the model's evaluate function to make predictions. I also deployed the weights to a cloud S3 bucket.
+
+
+## Project 3: Stack Overflow Cloud Security/Privacy-Related Post Classification
+Tech used: FastAPI, Docker
+
+Process: Same as above for using the model as a module. Also containerized the app using Docker which can be deployed anywhere. 
